@@ -1,11 +1,12 @@
+import { Outlet } from 'react-router-dom';
+
 import { AppHeader } from '@components/AppHeader';
-import { RootRouter } from '@routes/RootRouter';
 
 function App() {
   return (
     <>
       <AppHeader />
-      <RootRouter />
+      <Outlet />
     </>
   );
 }
