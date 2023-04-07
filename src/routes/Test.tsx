@@ -1,5 +1,7 @@
 import { Card, DonutChart, Title } from '@tremor/react';
 
+import { currencyFormatter } from '@lib/utils';
+
 const cities = [
   {
     name: 'New York',
@@ -27,9 +29,6 @@ const cities = [
   },
 ];
 
-const valueFormatter = (number: number) =>
-  `$ ${Intl.NumberFormat('us').format(number).toString()}`;
-
 export const Test = () => (
   <div>
     <h1 className='mb-8'>Test page on route gh-react-vite</h1>
@@ -42,7 +41,7 @@ export const Test = () => (
           data={cities}
           category="sales"
           index="name"
-          valueFormatter={valueFormatter}
+          valueFormatter={currencyFormatter}
           colors={['slate', 'violet', 'indigo', 'rose', 'cyan', 'amber']}
         />
       </Card>

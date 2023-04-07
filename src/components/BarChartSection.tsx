@@ -1,5 +1,7 @@
 import { BarChart, Card, Subtitle, Title } from '@tremor/react';
 
+import { currencyFormatter } from '@lib/utils';
+
 const chartdata = [
   {
     name: 'Amphibians',
@@ -36,10 +38,6 @@ const chartdata2 = [
   },
 ];
 
-const dataFormatter = (number: number) => {
-  return '$ ' + Intl.NumberFormat('us').format(number).toString();
-};
-
 export const BarChartSection = () => {
   return (
     <>
@@ -57,7 +55,7 @@ export const BarChartSection = () => {
             index="name"
             categories={['Number of threatened species']}
             colors={['blue']}
-            valueFormatter={dataFormatter}
+            valueFormatter={currencyFormatter}
             yAxisWidth={48}
           />
         </Card>
@@ -84,7 +82,7 @@ export const BarChartSection = () => {
               'Group F',
             ]}
             colors={['blue', 'teal', 'amber', 'rose', 'indigo', 'emerald']}
-            valueFormatter={dataFormatter}
+            valueFormatter={currencyFormatter}
             yAxisWidth={48}
           />
         </Card>
