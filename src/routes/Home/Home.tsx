@@ -6,6 +6,7 @@ import './Home.css';
 
 export const Home = () => {
   const [count, setCount] = useState(0);
+  const testAction = null;
   return (
     <div className="App">
       <div className='flex flex-col items-center'>
