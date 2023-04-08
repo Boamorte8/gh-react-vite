@@ -9,6 +9,6 @@ export const HeaderLink = ({ url, label }: { url: string, label: string }) => {
       }
     >
       {label}
-    </NavLink
+    </NavLink>
   );
 };
