@@ -1,12 +1,16 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 
 import { AppHeader } from '@components/AppHeader';
+import { LocationProvider } from '@lib/providers/LocationProvider';
 
 function App() {
+  const location = useLocation();
   return (
     <>
       <AppHeader />
-      <Outlet />
+      <LocationProvider>
+        <Outlet key={location.key} />
+      </LocationProvider>
     </>
   );
 }
