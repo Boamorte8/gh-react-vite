@@ -4,6 +4,7 @@ import { Home } from './Home/Home';
 import { Test } from './Test';
 import { Tremor } from './Tremor/Tremor';
 import App from 'App';
+import { RouteAnimation } from '@components/RouteAnimation';
 
 const router = createBrowserRouter([
   {
@@ -12,18 +13,20 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />,
+        element: <RouteAnimation classId='home'><Home /></RouteAnimation>,
       },
       {
         path: '/gh-react-vite',
-        element: <Test />,
+        element: <RouteAnimation classId='test'><Test /></RouteAnimation>,
       },
       {
         path: '/tremor',
-        element: <Tremor />,
+        element: <RouteAnimation classId='tremor'><Tremor /></RouteAnimation>,
       },
     ]
   },
 ]);
 
-export const RootRouter = () => <RouterProvider router={router} />;
+export const RootRouter = () => {
+  return <RouterProvider router={router} />;
+};

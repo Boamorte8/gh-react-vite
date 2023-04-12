@@ -1,6 +1,7 @@
 import { Card, DonutChart, Title } from '@tremor/react';
 
 import { currencyFormatter } from '@lib/utils';
+import { AnimatedTitle } from '@components/AnimatedTitle';
 
 const cities = [
   {
@@ -31,7 +32,7 @@ const cities = [
 
 export const Test = () => (
   <div>
-    <h1 className='mb-8'>Test page on route gh-react-vite</h1>
+    <AnimatedTitle className='mb-8'>Test page on route gh-react-vite</AnimatedTitle>
     <p className='mb-4'>Test of donut chart</p>
     <div className='flex justify-center'>
       <Card className="max-w-lg">
