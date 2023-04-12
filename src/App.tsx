@@ -9,7 +9,7 @@ function App() {
     <>
       <AppHeader />
       <LocationProvider>
-        <Outlet location={location} key={location.key} />
+        <Outlet key={location.key} />
       </LocationProvider>
     </>
   );
